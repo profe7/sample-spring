@@ -81,4 +81,34 @@ public class ArkServiceImpl  implements ArkService {
                 .build();
         return arkRepository.save(processor);
     }
+
+    @Override
+    public Processor editEntry(ArkRequest request, int Id) {
+        Optional<Processor> selected = arkRepository.findById(Id);
+        Processor processor = Processor.builder()
+                .id(Id)
+                .manufacturer(request.getManufacturer())
+                .family(request.getFamily())
+                .model(request.getModel())
+                .socket(request.getSocket())
+                .tdp(request.getTdp())
+                .build();
+
+        if (selected.isPresent()) {
+            return arkRepository.save(processor);
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public Processor deleteEntry(int Id) {
+        Optional<Processor> selected = arkRepository.findById(Id);
+        if (selected.isPresent()) {
+            arkRepository.deleteById(Id);
+            return selected.get();
+        } else {
+            return null;
+        }
+    }
 }

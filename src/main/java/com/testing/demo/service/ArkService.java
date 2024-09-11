@@ -19,4 +19,8 @@ public interface ArkService {
     Optional<ArkResponse> retrieveByFamily(String family);
 
     Processor addEntry(ArkRequest request);
+
+    Processor editEntry(ArkRequest request, int Id);
+
+    Processor deleteEntry(int Id);
 }

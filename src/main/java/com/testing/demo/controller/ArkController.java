@@ -42,4 +42,14 @@ public class ArkController {
     public ResponseEntity<Processor> addEntry(@RequestBody ArkRequest request) {
         return ResponseEntity.ok(arkService.addEntry(request));
     }
+
+    @PutMapping("editProcessor/{id}")
+    public ResponseEntity<Processor> editEntry(@RequestBody ArkRequest request, @PathVariable Integer id) {
+        return ResponseEntity.ok(arkService.editEntry(request, id));
+    }
+
+    @DeleteMapping("deleteProcessor/{id}")
+    public ResponseEntity<Processor> deleteEntry(@PathVariable Integer id) {
+        return ResponseEntity.ok(arkService.deleteEntry(id));
+    }
 }
