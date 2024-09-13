@@ -1,9 +1,9 @@
 package com.testing.demo.controller;
 
-import com.testing.demo.dto.ArkRequest;
-import com.testing.demo.dto.ArkResponse;
-import com.testing.demo.model.Processor;
-import com.testing.demo.service.ArkService;
+import com.testing.demo.model.dto.ArkRequest;
+import com.testing.demo.model.dto.ArkResponse;
+import com.testing.demo.model.entity.Processor;
+import com.testing.demo.service.Ark.ArkService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

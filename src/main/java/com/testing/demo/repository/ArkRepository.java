@@ -1,6 +1,6 @@
 package com.testing.demo.repository;
 
-import com.testing.demo.model.Processor;
+import com.testing.demo.model.entity.Processor;
 import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.testing.demo.dto;
+package com.testing.demo.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ArkRequest {
+public class ArkResponse {
     private String manufacturer;
 
     private String family;

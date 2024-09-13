@@ -1,10 +1,10 @@
 package com.testing.demo.controller;
 
-import com.testing.demo.dto.AuthResponseDto;
-import com.testing.demo.dto.LoginDto;
-import com.testing.demo.dto.RegisterDto;
-import com.testing.demo.security.JwtGenerator;
-import com.testing.demo.service.AuthService;
+import com.testing.demo.model.dto.AuthResponseDto;
+import com.testing.demo.model.dto.LoginDto;
+import com.testing.demo.model.dto.RegisterDto;
+import com.testing.demo.util.Jwt.JwtGenerator;
+import com.testing.demo.service.Auth.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

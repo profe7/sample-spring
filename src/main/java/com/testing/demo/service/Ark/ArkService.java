@@ -1,12 +1,12 @@
-package com.testing.demo.service;
+package com.testing.demo.service.Ark;
 
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import com.testing.demo.model.Processor;
-import com.testing.demo.dto.ArkRequest;
-import com.testing.demo.dto.ArkResponse;
+import com.testing.demo.model.entity.Processor;
+import com.testing.demo.model.dto.ArkRequest;
+import com.testing.demo.model.dto.ArkResponse;
 
 @Service
 public interface ArkService {

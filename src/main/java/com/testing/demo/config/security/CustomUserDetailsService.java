@@ -1,7 +1,7 @@
-package com.testing.demo.security;
+package com.testing.demo.config.security;
 
-import com.testing.demo.model.Roles;
-import com.testing.demo.model.UserEntity;
+import com.testing.demo.model.entity.Roles;
+import com.testing.demo.model.entity.UserEntity;
 import com.testing.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

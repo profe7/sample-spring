@@ -1,5 +1,6 @@
-package com.testing.demo.security;
+package com.testing.demo.util.Jwt;
 
+import com.testing.demo.config.security.SecurityConstants;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;

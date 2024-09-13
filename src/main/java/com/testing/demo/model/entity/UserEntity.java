@@ -1,4 +1,4 @@
-package com.testing.demo.model;
+package com.testing.demo.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
