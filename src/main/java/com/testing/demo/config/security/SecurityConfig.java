@@ -46,7 +46,13 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
                 .requestMatchers(new AntPathRequestMatcher("/api/v1/auth/**")).permitAll()
                 .anyRequest().authenticated())
             .httpBasic(Customizer.withDefaults());
-    http.addFilterBefore(jwtAuthFilter(), UsernamePasswordAuthenticationFilter.class);
+    http.addFilterBefore(jwtAuthFilter(), UsernamePasswordAuthenticationFilter.class)
+            .logout(logout -> logout
+                    .logoutUrl("/api/v1/auth/logout")
+                    .logoutSuccessUrl("/")
+                    .invalidateHttpSession(true)
+                    .deleteCookies("JSESSIONID"))
+    ;
 
     return http.build();
 }

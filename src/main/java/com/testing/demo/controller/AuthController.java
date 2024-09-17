@@ -50,4 +50,10 @@ public class AuthController {
         String token = tokenGenerator.generate(authentication);
         return new ResponseEntity<>(new AuthResponseDto(token), HttpStatusCode.valueOf(200));
     }
+
+    @PostMapping("logout/")
+    public ResponseEntity<String> logout() {
+        SecurityContextHolder.clearContext();
+        return ResponseEntity.ok("Logout successful!");
+    }
 }
